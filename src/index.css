@@ -338,7 +338,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-* Hide scrollbars in Chrome,
+/* Hide scrollbars in Chrome,
 Safari,
 and newer Edge */ .box::-webkit-scrollbar,
 .list::-webkit-scrollbar {
