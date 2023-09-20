@@ -1,70 +1,108 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Moviely React Documentation
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Moviely is a React-based application that allows users to search for movies and manage their watched movie list. It leverages various components and custom hooks to provide a seamless movie browsing experience.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **App**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The main component that orchestrates the entire application.
+- Manages movie search, movie details, and the watched movie list.
 
-### `npm test`
+### 2. **Loader**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- A simple loading indicator component displayed during API requests.
 
-### `npm run build`
+### 3. **ErrorMessage**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Displays error messages when there are issues with API requests.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. **NavBar**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The navigation bar component that contains the logo and search input.
 
-### `npm run eject`
+### 5. **Search**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Manages the movie search input and allows focusing using the "Enter" key.
+- Clears the search query when the "Enter" key is pressed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 6. **NumResults**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Displays the number of search results found.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 7. **Main**
 
-## Learn More
+- The main content area that contains the movie list and movie details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 8. **Box**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- A collapsible container used to organize components within the main content area.
 
-### Code Splitting
+### 9. **MovieList**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Displays a list of movies based on the search results.
 
-### Analyzing the Bundle Size
+### 10. **Movie**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Represents an individual movie item in the list.
 
-### Making a Progressive Web App
+### 11. **MovieDetails**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Displays detailed information about a selected movie.
+- Allows users to rate and add movies to their watched list.
 
-### Advanced Configuration
+### 12. **StarRating**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- A reusable star rating input component.
+- Allows users to rate movies using stars.
 
-### Deployment
+### 13. **Star**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Represents an individual star within the StarRating component.
+- Can be filled or empty based on user interaction.
 
-### `npm run build` fails to minify
+### 14. **WatchedSummary**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Displays a summary of watched movies, including average IMDb ratings, user ratings, and runtime.
+
+### 15. **WatchedMoviesList**
+
+- Lists watched movies and provides an option to delete them.
+
+### 16. **WatchedMovie**
+
+- Represents an individual watched movie in the list.
+- Displays IMDb ratings, user ratings, and runtime.
+
+## Custom Hooks
+
+### 1. **useKey**
+
+- Listens for specific keyboard events and triggers actions.
+- Used to handle keyboard interactions, such as focusing on input fields and triggering actions.
+
+### 2. **useLocalStorageState**
+
+- Manages state data in local storage.
+- Allows for the synchronization of state with a specific key in local storage.
+
+### 3. **useMovies**
+
+- Facilitates movie data fetching from the OMDB API based on user search queries.
+- Manages the state of movies, loading status, and potential errors associated with API requests.
+
+## API Integration
+
+- Moviely integrates with the OMDB API (Open Movie Database) to fetch movie data based on user queries.
+- The API key used for authentication is stored in a constant variable named `KEY`.
+
+## Dependencies
+
+- The project relies on various external libraries and icons, including React, PropTypes, and Phosphor Icons.
+
+---
+
+This concludes the documentation for your Moviely React application. The provided components and custom hooks work together to create a user-friendly movie browsing and management experience. If you have any further questions or need additional documentation, please feel free to ask.
